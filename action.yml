@@ -12,13 +12,13 @@ inputs:
   milliseconds:
     description: Your input description here
     required: true
-    default: '1000'
+    default: "1000"
+
+runs:
+  using: node20
+  main: dist/index.js
 
 # Define your outputs here.
 outputs:
   time:
     description: Your output description here
-
-runs:
-  using: node20
-  main: dist/index.js
