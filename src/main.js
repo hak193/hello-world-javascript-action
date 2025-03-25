@@ -6,6 +6,12 @@ import { wait } from './wait.js'
  *
  * @returns {Promise<void>} Resolves when the action is complete.
  */
+import { run } from './index.js'
+// Execute the main action function
+run().catch((error) => {
+  console.error('Unhandled error:', error)
+  process.exit(1) // Exit with a failure code to indicate the action failed
+})
 export async function run() {
   try {
     const ms = core.getInput('milliseconds')
