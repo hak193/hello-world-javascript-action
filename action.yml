@@ -1,6 +1,6 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
+name: java-action
+description: simple hello world java action
+author: I-DevR
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
@@ -10,14 +10,18 @@ branding:
 # Define your inputs here.
 inputs:
   milliseconds:
-    description: Your input description here
+    description: write hello world
     required: true
-    default: '1000'
+    default: 'world'
 
 # Define your outputs here.
 outputs:
+  result:
+    description: The result of the action
+  completion_status:
+    description: Indicates whether the action completed successfully
   time:
-    description: Your output description here
+    description: description goes here
 
 runs:
   using: node20
